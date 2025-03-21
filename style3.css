@@ -1,0 +1,129 @@
+span.disable-links {
+  pointer-events: none;
+}
+
+/* .vivaldi,
+.badge {
+  width: 50%;
+
+  margin-top: 1rem;
+  display: inline-block;
+} */
+
+.card-link {
+  background-image: url("img/storefrontsColorizedTextureBlueNeon.png");
+}
+
+.accordian__button {
+  width: 300px;
+  height: 60px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 40px;
+  background-image: url("storefrontsColorizedTextureBlueNeon.jpg");
+  /* font-weight: 500; */
+  /* background: transparent; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* position: relative; */
+  /* display: inline-block; */
+  /* box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1); */
+  outline: none;
+  font-size: 15px;
+  margin-top: 1rem;
+
+  width: 50%;
+}
+
+/* .normal__button {
+    display: inline-block;
+    margin-right: 20px;
+
+} */
+
+.normal__button:after {
+  float: right;
+  transform: scale(1.5);
+}
+
+.normal__button--active {
+  float: right;
+  transform: scale(1.5);
+}
+
+.normal__button--active::after {
+  border-radius: 10px;
+}
+
+.accordian__button::after {
+  content: "\25be";
+
+  transform: scale(1.5);
+}
+
+.accordian__button--active {
+  border-radius: 10px;
+}
+
+.accordian__button--active::after {
+  content: "\25b4";
+
+  /* border-radius: 10px; */
+}
+
+/* .accordian__content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;
+  /* width: 300px; */
+  /* padding: 0 15px; */
+  /* font-size: 0.1.2rem; */
+
+  font-weight: 400;
+
+  text-decoration: none;
+  position: relative;
+  width: 75%;
+
+  color: rgb(212, 21, 21);
+  background-color: black;
+  /* margin: 1rem; */
+} */
+
+.card-title {
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.accordian__button:hover,
+.normal__button:hover,
+.card-image:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 0, 0, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+p,
+li {
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem;
+  font-family: sans-serif;
+}
+.button-container {
+  float: right;
+  margin-top: 0;
+}
