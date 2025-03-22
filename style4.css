@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
-/* @import url("style3.css"); */
+@import url("topnav.css");
+
+:root {
+  --drkblack: black;
+  --black: rgba(0, 0, 0, 0.4);
+  --grey1: rgba(116, 125, 136, 0.5);
+  --grey2: rgba(255, 255, 255, 0.2);
+  --blue: rgb(21, 53, 212, 0.5);
+  --white: #fff;
+  --red: rgb(212, 21, 21);
+  --verylightGreen: #d6f8d6;
+  --green: #008000;
+}
 
 * {
   margin: 0;
@@ -19,6 +31,10 @@ body {
 
   text-decoration: none;
   animation: mymove 180s infinite;
+}
+
+.card-wrapper {
+  margin-top: 3vh;
 }
 
 /*background image animation*/
@@ -43,14 +59,14 @@ body {
 
 .card-list .card-item .card-link {
   user-select: none;
-  background-image: url("storefrontsColorizedTextureBlueNeon.png");
+  background-image: url("storefrontsColorizedTextureBlueNeon.jpg");
 
   display: block;
   padding: 18px;
   border-radius: 12px;
   text-decoration: none;
   border: 2px solid transparent;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 10px 10px var(--drkblack);
   transition: 0.2s ease;
   animation: fadeInAnimation ease 4s;
   animation-iteration-count: 1;
@@ -75,25 +91,26 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   margin: 16px 0 18px;
-  background: #dde4ff;
+  background: var(--white);
   width: fit-content;
   border-radius: 50px;
 }
 
-button.accordian__button {
-  width: 300px;
-  height: 60px;
-  color: #fff;
+.accordian__button {
+  margin-top: 2rem;
+  width: 200px;
+  height: 40px;
+  color: var(--white);
   border-radius: 20px;
-  padding: 10px 40px;
-  background-image: url("storefrontsColorizedTextureBlueNeon.jpg");
+  padding: 5px;
+  background-image: url("storefrontsColorizedTextureBlueNeon.png");
   filter: opacity(110%);
-  /* font-weight: 500; */
+  font-weight: 500;
   /* background: transparent; */
   cursor: pointer;
   transition: all 0.3s ease;
   /* position: relative; */
-  /* display: inline-block; */
+
   /* box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1); */
@@ -101,7 +118,6 @@ button.accordian__button {
   font-size: 15px;
   margin-top: 0.5rem;
   content: "\25be";
-  width: 50%;
 }
 
 .accordian__button::after {
@@ -114,77 +130,93 @@ button.accordian__button {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s;
-  /* width: 300px; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   padding: 0 15px;
-  /* font-size: 0.1.2rem; */
-  background-image: url("storefrontsColorizedTextureBlueNeon.jpg");
+  font-size: 1rem;
+  background-color: var(--grey1);
 
-  font-weight: 400;
-  font-size: 1.2rem;
   opacity: 1;
   text-decoration: none;
   position: relative;
-  width: 75%;
-
-  color: rgb(212, 21, 21);
+  width: 100;
+  margin-left: auto;
+  color: var(--red);
   background-color: black;
   /* margin: 1rem; */
 }
 
-.normal__button-group {
+.accordian-button {
+  display: flex;
+  text-align: center;
+}
+
+.accordian {
   display: inline-block;
+  justify-content: center;
+  align-items: center;
   font-size: 0.5rem;
   text-align: center;
-  margin-left: 50%;
+  margin-top: 1rem;
+}
+
+.normal__button-group {
+  display: flex;
+  justify-content: center;
+  font-size: 0.5rem;
+  text-align: center;
 }
 
 .normal__button,
 .normal__button-git {
-  color: rgb(239, 248, 239);
+  color: var(--white);
   background-image: url("storefrontsColorizedTextureBluetexture.jpg");
   height: 40px;
   width: 100px;
   margin-top: 1rem;
   border-radius: 20px;
+  margin-bottom: 1rem;
 }
 
 .normal__button:hover,
 .normal__button-git:hover {
-  background-color: whitesmoke;
+  background-color: var(--white);
 }
 
 .accordian__button:hover,
 .card-image:hover,
 .normal__button:hover,
-.normal__button-git:hover {
+.normal__button-git:hover,
+.material-symbols-outlined:hover {
   filter: opacity(100%);
   box-shadow: 4px 4px 6px 0 rgba(255, 0, 0, 0.5),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.3),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
-  background-color: #ddd;
+    inset 4px 4px 6px 0 var(--black);
+  background-color: var(--white);
 }
 
 /* .badge.bach {
   pointer-events: none;
 } */
 
-.card-list .card-link .badge.vivaldi {
-  color: green;
+/* .card-list  .badge.vivaldi {
+  color: #008000;
   background: #d6f8d6;
-}
+} */
 
 .badge.disabled {
   pointer-events: none;
   cursor: not-allowed;
 }
 
-.card-list .card-link .accordian-button {
-  color: green;
+/* .card-list .card-link .accordian-button {
+  color: var(--green);
   background: #d6f8d6;
-}
+} */
 .card-list .card-link .badge.mozart {
-  color: rgb(255, 0, 0);
+  color: var(--red);
   background: rgb(255, 243, 205, 0.8);
 }
 .card-list .card-link .accordian-button {
@@ -197,7 +229,7 @@ button.accordian__button {
 }
 
 .card-list .card-link .badge.mendelssohn {
-  color: rgb(167, 160, 104);
+  color: var(--grey1);
   background: #d6f8d6;
 }
 
@@ -214,11 +246,19 @@ button.accordian__button {
   margin-top: 3rem;
 }
 
-.card-list .card-link .card-button {
+.card-button {
+  border: var(--blue);
+  color: var(--blue);
+  transform: rotate(-45deg);
+  border-radius: 40%;
+  background-color: var(--grey1);
+}
+
+.card-list .card-link:hover .card-button {
   height: 35px;
   width: 35px;
-  border-radius: 20%;
-  margin: 30px 0 5px;
+  border-radius: 40%;
+  /* margin: 30px 0 5px; */
   background: none;
   cursor: pointer;
   border: 2px solid rgb(255, 0, 0, 0.5);
@@ -226,11 +266,10 @@ button.accordian__button {
   transform: rotate(-45deg);
 }
 
-.card-list .card-link:hover .card-button,
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: #fff;
-  background: rgb(255, 0, 0);
+  background: var(--grey2);
 }
 
 badge.vivaldi {
@@ -240,9 +279,10 @@ badge.vivaldi {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: rgb(229, 30, 30, 0.7);
+  color: var(--black);
   background-color: rgb(173, 216, 230, 0.5);
   border-radius: 10px;
+  margin-top: 0.5rem;
 }
 
 .dropdown {
@@ -278,4 +318,9 @@ badge.vivaldi {
     opacity: 1;
     transform: translate(0px) scale(1);
   }
+}
+
+/*About page*/
+.header {
+  margin-top: 2rem;
 }
