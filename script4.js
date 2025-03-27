@@ -54,3 +54,13 @@ function on() {
 function off() {
   document.getElementById("overlay").style.display = "none";
 }
+
+const nodeList = document.querySelectorAll(".normal__button");
+for (let i = 0; i < nodeList.length; i++) {
+  nodeList[i].innerHTML = "Site";
+}
+
+const nodeListgit = document.querySelectorAll(".normal__button-git");
+for (let i = 0; i < nodeList.length; i++) {
+  nodeListgit[i].innerHTML = "Github";
+}
