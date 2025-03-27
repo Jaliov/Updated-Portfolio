@@ -280,7 +280,9 @@ li {
 }
 
 :root {
-  --swiper-navigation-size: 20px; /* Adjust the size as needed */
+  --swiper-navigation-size: 30px; /* Adjust the size as needed */
+  margin-left: 5px;
+  margin-right: 5x;
 }
 
 .swiper-button-next:hover,
